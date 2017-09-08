@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:animateLayoutChanges="true"
 		tools:context="moe.feng.nyanpasu.pinsettings.ui.MainActivity">
+
+	<LinearLayout
+			android:id="@+id/tips_container"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="16dp"
+			android:orientation="vertical"
+			android:background="@color/material_teal_600"
+			android:theme="@android:style/Theme.Material"
+			android:elevation="2dp"
+			android:visibility="gone">
+
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textAppearance="@android:style/TextAppearance.Material.Body1"
+				android:text="@string/first_show_tip"/>
+
+		<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:layout_gravity="end"
+				android:id="@+id/button_ok"
+				android:text="@android:string/ok"
+				style="@android:style/Widget.Material.Button.Borderless"/>
+
+	</LinearLayout>
 
 	<moe.feng.nyanpasu.pinsettings.view.AnimatedRecyclerView
 			android:id="@android:id/list"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
 			android:layoutAnimation="@anim/item_layout_animation"/>
 
-</FrameLayout>
+</LinearLayout>

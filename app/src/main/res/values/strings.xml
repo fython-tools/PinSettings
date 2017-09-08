@@ -7,6 +7,10 @@
 	<string name="action_settings">Settings</string>
 	<string name="action_about">About</string>
 
+	<string name="first_show_tip">Pin Settings can help you pin system settings shortcuts to home screen for convenience.
+		\n\nThis application supports only Android 5.0+ devices. (Ready for Android O)
+		\nOEM may change the behaviors of launching behaviors. We may NOT support any third-party settings.</string>
+
 	<string name="toast_pinned_to_home">\"%s\" pinned to home</string>
 
 	<string name="item_action_pin">Pin to home</string>
