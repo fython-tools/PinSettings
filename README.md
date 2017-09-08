@@ -12,7 +12,7 @@ What you need when building:
 
 This application supports only Android 5.0+ devices. (Ready for Android O)
  
- OEM may change the behaviors of launching behaviors. We may NOT support any third-party settings.
+ OEM may change the behaviors of launching settings. We may NOT support any third-party settings.
 
 ## Releases
 

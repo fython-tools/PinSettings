@@ -1,0 +1,29 @@
+<resources>
+
+	<string name="app_name">Pin 設定</string>
+
+	<!-- Main Activity -->
+	<string name="activity_main_title">固定設定至主畫面</string>
+	<string name="action_settings">設定</string>
+	<string name="action_about">關於</string>
+
+	<string name="first_show_tip">Pin 設定可以幫助你便捷地將系統設定快捷方式固定至主畫面。
+		\n\n這個應用程式僅支持 Android 5.0 以上的設備。(已為 Android O 就緒)
+		\nOEM 廠商會改變啟動設定的行為，我們可能不支援任何三方設定。</string>
+
+	<string name="toast_pinned_to_home">「%s」 已固定至主畫面</string>
+
+	<string name="item_action_pin">固定至主畫面</string>
+
+	<!-- About dialog -->
+	<string name="about_message">我為什麼開發這款應用程式？ 只是想要快速地改變系統設定。
+		\n\n譬如，我的手機上有許多種感應付款方式。當我不使用 Pin 設定來切換它們時，我必須點若干次以到達設定介面。
+		\n\n這個應用程式僅支持 Android 5.0 以上的設備。(已為 Android O 就緒) OEM 廠商會改變啟動設定的行為，我們可能不支援任何三方設定。
+		\n\n這個應用程式使用 GPL v3 協議。
+		\n\n我的聯絡方式:
+		\n新浪微博: \@FungGo
+		\nTelegram: \@fython</string>
+	<string name="button_donate_via_alipay">通過支付寶捐贈</string>
+	<string name="button_github">GitHub</string>
+
+</resources>

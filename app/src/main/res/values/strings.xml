@@ -9,7 +9,7 @@
 
 	<string name="first_show_tip">Pin Settings can help you pin system settings shortcuts to home screen for convenience.
 		\n\nThis application supports only Android 5.0+ devices. (Ready for Android O)
-		\nOEM may change the behaviors of launching behaviors. We may NOT support any third-party settings.</string>
+		\nOEM may change the behaviors of launching settings. We may NOT support any third-party settings.</string>
 
 	<string name="toast_pinned_to_home">\"%s\" pinned to home</string>
 
@@ -18,7 +18,7 @@
 	<!-- About dialog -->
 	<string name="about_message">Why I develop this application? I just want to change system settings quickly.
 		\n\nFor example, there are many Tap &amp; Pay ways on my phone. When I go to switch them without Pin Settings, I have to click many times to arrive settings.
-		\n\nThis application supports only Android 5.0+ devices. (Ready for Android O) OEM may change the behaviors of launching behaviors. We may NOT support any third-party settings.
+		\n\nThis application supports only Android 5.0+ devices. (Ready for Android O) OEM may change the behaviors of launching settings. We may NOT support any third-party settings.
 		\n\nThis application uses GPL v3 License.
 		\n\nMy contacts:
 		\nSina Weibo: \@FungGo

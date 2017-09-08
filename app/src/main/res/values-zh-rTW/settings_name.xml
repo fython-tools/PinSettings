@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings Name -->
+<resources>
+	<string name="wifi_settings">Wi-Fi</string>
+	<string name="wifi_ip_settings">高級 Wi-Fi 設定</string>
+	<string name="bluetooth_settings">蓝牙</string>
+	<string name="wireless_settings">其它網路設定</string>
+	<string name="vpn_settings">VPN</string>
+	<string name="nfc_settings">NFC</string>
+	<string name="nfc_payment_settings">感應付款</string>
+	<string name="cast_settings">投放</string>
+	<string name="display_settings">顯示</string>
+	<string name="night_mode_settings">夜間模式</string>
+	<string name="home_settings">主畫面</string>
+	<string name="sound_settings">聲音与振動</string>
+	<string name="zen_mode_settings">勿擾模式</string>
+	<string name="battery_saver_settings">節電模式</string>
+	<string name="internal_storage_settings">存儲</string>
+	<string name="all_applications_settings">所有應用程式</string>
+	<string name="security_settings">安全</string>
+	<string name="sync_settings">帳戶與同步</string>
+	<string name="location_settings">位置</string>
+	<string name="locale_settings">地區及語言</string>
+	<string name="input_method_settings">輸入法</string>
+	<string name="accessibility_settings">無障礙</string>
+	<string name="print_settings">列印</string>
+	<string name="application_development_settings">開發人員選項</string>
+	<string name="device_info_settings">設備資訊</string>
+</resources>
