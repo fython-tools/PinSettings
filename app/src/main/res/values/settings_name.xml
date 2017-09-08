@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings Name -->
+<resources>
+	<string name="wifi_settings">Wi-Fi</string>
+	<string name="wifi_ip_settings">Wi-Fi Advanced</string>
+	<string name="bluetooth_settings">Bluetooth</string>
+	<string name="wireless_settings">Wireless settings</string>
+	<string name="vpn_settings">VPN</string>
+	<string name="nfc_settings">NFC</string>
+	<string name="nfc_payment_settings">Tap &amp; Pay</string>
+	<string name="cast_settings">Cast</string>
+	<string name="display_settings">Display</string>
+	<string name="night_mode_settings">Night mode</string>
+	<string name="home_settings">Home launcher</string>
+	<string name="sound_settings">Sound</string>
+	<string name="zen_mode_settings">Do Not Disturb</string>
+	<string name="battery_saver_settings">Battery saver</string>
+	<string name="internal_storage_settings">Storage</string>
+	<string name="all_applications_settings">All apps</string>
+	<string name="security_settings">Security</string>
+	<string name="sync_settings">Account &amp; Sync</string>
+	<string name="location_settings">Location</string>
+	<string name="locale_settings">Locale &amp; Language</string>
+	<string name="input_method_settings">Input method</string>
+	<string name="accessibility_settings">Accessibility</string>
+	<string name="print_settings">Print</string>
+	<string name="application_development_settings">Development options</string>
+	<string name="device_info_settings">Device info</string>
+</resources>

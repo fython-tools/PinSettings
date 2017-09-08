@@ -1,0 +1,20 @@
+<resources>
+
+	<style name="BaseAppTheme" parent="android:Theme.Material.Light">
+		<item name="android:colorAccent">@color/material_teal_300</item>
+		<item name="android:statusBarColor">@color/light_status_bar_background</item>
+		<item name="android:actionBarStyle">@style/Widget.ActionBar.TealTitle</item>
+	</style>
+
+	<style name="AppTheme" parent="BaseAppTheme">
+	</style>
+
+	<style name="Widget.ActionBar.TealTitle" parent="android:Widget.Material.Light.ActionBar.Solid">
+		<item name="android:titleTextStyle">@style/TextAppearance.TealTitle</item>
+	</style>
+
+	<style name="TextAppearance.TealTitle" parent="android:TextAppearance.Material.Widget.ActionBar.Title">
+		<item name="android:textColor">@color/material_teal_500</item>
+	</style>
+
+</resources>
