@@ -12,13 +12,18 @@ import moe.feng.nyanpasu.pinsettings.drawable.CompositeDrawable
 import moe.feng.nyanpasu.pinsettings.receiver.PinSuccessReceiver
 import android.graphics.Canvas
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import moe.feng.nyanpasu.pinsettings.R
 
 object LauncherUtils {
 
 	fun addShortcut(context: Context, titleRes: Int, iconRes: Int, action: String) {
 		val title = context.getString(titleRes)
-		val icon = IconCompat.createWithBitmap(makeShortcutIcon(context, iconRes))
+		val icon = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+			IconCompat.createWithBitmap(makeShortcutIcon(context, iconRes))
+		} else {
+			IconCompat.createWithAdaptiveBitmap(makeAdaptiveIcon(context, iconRes))
+		}
 		ShortcutManagerCompat.requestPinShortcut(
 				context,
 				ShortcutInfoCompat.Builder(context, action)
@@ -57,6 +62,31 @@ object LauncherUtils {
 		context.resources.getDrawable(iconRes).mutate().apply {
 			setTint(context.resources.getColor(R.color.material_teal_500))
 			setBounds(`12dp`, `12dp`, `12dp` + `24dp`, `12dp` + `24dp`)
+		}.draw(canvas)
+
+		return bitmap
+	}
+
+	private fun makeAdaptiveIcon(context: Context, iconRes: Int): Bitmap {
+		val `108dp` = ScreenUtils.convertDpToPixel(108f).toInt()
+		val `36dp` = ScreenUtils.convertDpToPixel(36f).toInt()
+		val `18dp` = `36dp` / 2
+
+		// Create bitmap canvas
+		val bitmap = Bitmap.createBitmap(`108dp`, `108dp`, Bitmap.Config.ARGB_8888)
+		val canvas = Canvas(bitmap)
+
+		// Draw background
+		canvas.drawColor(context.resources.getColor(R.color.material_grey_100))
+
+		// Draw foreground
+		context.resources.getDrawable(iconRes).mutate().apply {
+			setTint(context.resources.getColor(R.color.material_teal_500))
+			setBounds(
+					`108dp` / 2 - `18dp`,
+					`108dp` / 2 - `18dp`,
+					`108dp` / 2 + `18dp`,
+					`108dp` / 2 + `18dp`)
 		}.draw(canvas)
 
 		return bitmap
