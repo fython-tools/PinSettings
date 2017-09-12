@@ -39,11 +39,7 @@ val SETTINGS_ITEMS = mutableListOf(
 	}
 }
 
-data class SettingsItem(val action: String, val titleResId: Int, val iconResId: Int): ModelBindAdapter.IAdapterModel {
-
-	override fun getLayoutId(): Int = R.layout.item_settings_list
-
-}
+data class SettingsItem(val action: String, val titleResId: Int, val iconResId: Int)
 
 private fun String.createItem(titleResId: Int, iconResId: Int) = SettingsItem(this, titleResId, iconResId)
 

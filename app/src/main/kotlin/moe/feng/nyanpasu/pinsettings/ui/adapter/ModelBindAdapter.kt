@@ -10,13 +10,13 @@ import android.view.ViewGroup
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-class ModelBindAdapter<T: ModelBindAdapter.IAdapterModel>(private var binder: ModelBinder<T>? = null)
+class ModelBindAdapter<T>(private var binder: ModelBinder<T>? = null)
 	: RecyclerView.Adapter<ModelBindAdapter.ViewHolder>() {
 
 	var items: MutableList<T> = mutableListOf()
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-		val view = LayoutInflater.from(parent.context).inflate(items[0].getLayoutId(), parent, false)
+		val view = LayoutInflater.from(parent.context).inflate(binder!!.layoutResId, parent, false)
 		val holder = ViewHolder(this, view)
 		binder!!.onViewCreated(view, holder)
 		return holder
@@ -40,7 +40,7 @@ class ModelBindAdapter<T: ModelBindAdapter.IAdapterModel>(private var binder: Mo
 			viewArrays.put(viewIndex, view)
 		}
 
-		fun <T: IAdapterModel> getCurrentData(): T = bindAdapter.items[adapterPosition] as T
+		fun <T> getCurrentData(): T = bindAdapter.items[adapterPosition] as T
 
 		class Property<T: View>(private val viewIndex: Int): ReadWriteProperty<ViewHolder, T> {
 
@@ -54,11 +54,13 @@ class ModelBindAdapter<T: ModelBindAdapter.IAdapterModel>(private var binder: Mo
 
 	}
 
-	abstract class ModelBinder<in T: IAdapterModel> {
+	abstract class ModelBinder<in T> {
 
 		private var bindViewCount = 0
 
 		private var needBindViews = mutableListOf<Pair<Int, Int>>() // view index to view id
+
+		abstract val layoutResId: Int
 
 		@CallSuper open fun onViewCreated(view: View, holder: ViewHolder) {
 			needBindViews.forEach { holder[it.first] = view.findViewById(it.second) }
@@ -84,12 +86,6 @@ class ModelBindAdapter<T: ModelBindAdapter.IAdapterModel>(private var binder: Mo
 			needBindViews.add(temp to viewId)
 			return ViewHolder.Property(temp)
 		}
-
-	}
-
-	interface IAdapterModel {
-
-		fun getLayoutId(): Int
 
 	}
 

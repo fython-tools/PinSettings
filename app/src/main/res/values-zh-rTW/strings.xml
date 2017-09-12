@@ -26,4 +26,7 @@
 	<string name="button_donate_via_alipay">通過支付寶捐贈</string>
 	<string name="button_github">GitHub</string>
 
+	<!-- Settings -->
+	<string name="pref_shortcut_color">快捷方式顏色</string>
+
 </resources>

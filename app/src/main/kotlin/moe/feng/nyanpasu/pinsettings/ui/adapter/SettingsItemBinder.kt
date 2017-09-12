@@ -13,6 +13,8 @@ import moe.feng.nyanpasu.pinsettings.view.CheatSheet
 
 class SettingsItemBinder: ModelBindAdapter.ModelBinder<SettingsItem>() {
 
+	override val layoutResId: Int = R.layout.item_settings_list
+
 	private var ViewHolder.icon by autoBindView<ImageView>(android.R.id.icon)
 	private var ViewHolder.title by autoBindView<TextView>(android.R.id.title)
 	private var ViewHolder.pinAction by autoBindView<ImageButton>(R.id.action_pin)

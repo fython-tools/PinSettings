@@ -45,7 +45,7 @@ class StringSharedPreferenceGetter internal constructor(private val key: String?
 	: ReadWriteProperty<ISharedPreferencesProvider, String?>, AndroidExtensions {
 
 	override fun getValue(thisRef: ISharedPreferencesProvider, property: KProperty<*>): String?
-			= thisRef.sharedPref[key ?: property.name].asString(defValue)
+			= thisRef.sharedPref[key ?: property.name].asString(defValue) ?: defValue
 
 	override fun setValue(thisRef: ISharedPreferencesProvider, property: KProperty<*>, value: String?) {
 		thisRef.sharedPref[key ?: property.name] = value

@@ -13,6 +13,8 @@ import moe.feng.nyanpasu.pinsettings.receiver.PinSuccessReceiver
 import android.graphics.Canvas
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
+import moe.feng.common.material.colorutils.ColorLevel
+import moe.feng.common.material.colorutils.MaterialColors
 import moe.feng.nyanpasu.pinsettings.R
 
 object LauncherUtils {
@@ -60,7 +62,7 @@ object LauncherUtils {
 
 		// Draw foreground
 		context.resources.getDrawable(iconRes).mutate().apply {
-			setTint(context.resources.getColor(R.color.material_teal_500))
+			setTint(MaterialColors[MaterialColors.parseStringToColor(SettingsInstance.shortcutColor!!)][ColorLevel.`500`])
 			setBounds(`12dp`, `12dp`, `12dp` + `24dp`, `12dp` + `24dp`)
 		}.draw(canvas)
 
@@ -81,7 +83,7 @@ object LauncherUtils {
 
 		// Draw foreground
 		context.resources.getDrawable(iconRes).mutate().apply {
-			setTint(context.resources.getColor(R.color.material_teal_500))
+			setTint(MaterialColors[MaterialColors.parseStringToColor(SettingsInstance.shortcutColor!!)][ColorLevel.`500`])
 			setBounds(
 					`108dp` / 2 - `18dp`,
 					`108dp` / 2 - `18dp`,

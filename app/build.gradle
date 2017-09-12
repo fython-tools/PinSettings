@@ -29,4 +29,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support:recyclerview-v7:$androidSupportVersion"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+    compile 'moe.feng:MaterialColorUtils:0.1.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
 }

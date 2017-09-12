@@ -19,9 +19,8 @@ import moe.feng.nyanpasu.pinsettings.*
 import moe.feng.nyanpasu.pinsettings.ui.adapter.ModelBindAdapter
 import moe.feng.nyanpasu.pinsettings.ui.adapter.SettingsItemBinder
 import moe.feng.nyanpasu.pinsettings.ui.fragment.MainSettingsFragment
-import moe.feng.nyanpasu.pinsettings.util.Preferences
+import moe.feng.nyanpasu.pinsettings.util.SettingsInstance
 import moe.feng.nyanpasu.pinsettings.util.ToastUtils
-import moe.feng.nyanpasu.pinsettings.util.kotlinyan.getSharedPreferencesProvider
 
 class MainActivity : Activity() {
 
@@ -31,8 +30,6 @@ class MainActivity : Activity() {
 	private val tipsContainer by lazy { findViewById<View>(R.id.tips_container) }
 
 	private val pinSuccessReceiver by lazy { PinSuccessReceiver() }
-
-	private val settingsInstance = getSharedPreferencesProvider<Preferences>()
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
@@ -44,14 +41,14 @@ class MainActivity : Activity() {
 		recyclerView.adapter = adapter
 		adapter.items.addAll(SETTINGS_ITEMS)
 
-		if (settingsInstance.shouldShowTips) {
+		if (SettingsInstance.shouldShowTips) {
 			tipsContainer.visibility = View.VISIBLE
 		}
 
 		val button = findViewById<Button>(R.id.button_ok)
 		button.setOnClickListener {
 			tipsContainer.visibility = View.GONE
-			settingsInstance.shouldShowTips = false
+			SettingsInstance.shouldShowTips = false
 		}
 	}
 
