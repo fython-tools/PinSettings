@@ -18,6 +18,7 @@ import android.widget.Toast
 import moe.feng.nyanpasu.pinsettings.*
 import moe.feng.nyanpasu.pinsettings.ui.adapter.ModelBindAdapter
 import moe.feng.nyanpasu.pinsettings.ui.adapter.SettingsItemBinder
+import moe.feng.nyanpasu.pinsettings.ui.fragment.MainSettingsFragment
 import moe.feng.nyanpasu.pinsettings.util.Preferences
 import moe.feng.nyanpasu.pinsettings.util.ToastUtils
 import moe.feng.nyanpasu.pinsettings.util.kotlinyan.getSharedPreferencesProvider
@@ -71,7 +72,7 @@ class MainActivity : Activity() {
 
 	override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
 		R.id.action_settings -> {
-			// TODO Settings Activity
+			SettingsActivity.launch<MainSettingsFragment>(this)
 			true
 		}
 		R.id.action_about -> {

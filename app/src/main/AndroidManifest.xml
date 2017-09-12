@@ -23,6 +23,12 @@
 			</intent-filter>
 		</activity>
 
+		<activity android:name=".ui.SettingsActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+			</intent-filter>
+		</activity>
+
 		<receiver android:name=".receiver.PinSuccessReceiver" android:exported="false"/>
 
 	</application>
